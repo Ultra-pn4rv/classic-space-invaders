@@ -1,4 +1,4 @@
-import EnemyController from "./enemyController.js";
+import EnemyController from "./EnemyController.js";
 import BulletController from "./BulletController.js";
 import Player from "./player.js";
 
