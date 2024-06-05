@@ -135,8 +135,8 @@ createEnemies(ctx) {
             if(enemyNumber > 0) {
                 this.enemyRows[rowIndex].push = (new Enemy(enemyIndex * 35, enemyNumber));
             }
-        })
-    })
+        });
+    });
 } 
 
 
