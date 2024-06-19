@@ -9,11 +9,13 @@ export default class Bullet {
     this.width = 5;
     this.height = 20;
   }
+
   draw(ctx) {
     this.y -= this.velocity;
     ctx.fillStyle = this.bulletColor;
     ctx.fillRect(this.x, this.y, this.width, this.height);
   }
+
   collideWith(sprite) {
     if(
       this.x + this.width > sprite.x &&

@@ -10,14 +10,14 @@
   <title>Classic Space Invaders | Felipe</title>
   <style>
     canvas{
-      box-shadow: black 20px 10px 50px;
+      box-shadow: black;
     }
     h1{
       margin-top: 20px;
       margin-bottom: 10px;
       font-size: 2.5em;
       font-family: "Press Start 2P";
-      color: white;
+      color: rgb(0, 0, 0);
     }
     body{
       display: flex;
@@ -28,13 +28,63 @@
       height: 100vh;
       background: linear-gradient(
         0deg,
-        rgba(12, 12, 12, 0.804) 0%,
-        rgb(0, 0, 0) 100%
+        rgba(255, 255, 255, 0.804) 0%
       );
     }
+    #game, #title {
+        display: none;
+      }
+      #instructions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      #instructions p{
+        margin: 10px 0;
+        font-size: 1.2em;
+        font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+      }
+      #playButton {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 1.2em;
+        font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+        color: rgb(32, 206, 67);
+        cursor: pointer;
+      }
+      #playButton:hover {
+        background: rgb(32, 206, 67);
+        color: white;
+        box-shadow: rgb(146, 231, 142) 5px 5px 10px;
+        transition: 0.3s;
+      }
+      #logoSenac {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
   </style>
 </head>
 <body>
+  <div id="logoSenac">
+    <div>
+      <img src="src/assets/images/logo-senac.png" alt="Logo Senac" width="300px" height="110px">
+    </div>
+    <div>
+      <img src="src/assets/images/logo-sesc.png" alt="Logo Sesc" width="300px" height="150px">
+    </div>
+  </div>
+  <div id="instructions">
+    <h1>Bem-vindo ao Jogo Space Invaders!</h1>
+    <p>Use as setas esquerda e direita para mover.</p>
+    <p>Pressione a barra de espaço para atirar.</p>
+    <button id="playButton">Jogar</button>
+  </div>
   <h1>Space Invaders</h1>
   <canvas id="game"></canvas>
   <script type="module" src="src/javascript/index.js"></script>
