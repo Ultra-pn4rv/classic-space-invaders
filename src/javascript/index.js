@@ -9,7 +9,7 @@ const logoSenac = document.getElementById("logoSenac");
 const instructions = document.getElementById("instructions");
 const playButton = document.getElementById("playButton");
 
-canvas.width = 600;
+canvas.width = 1024;
 canvas.height = 600;
 
 const background = new Image();
