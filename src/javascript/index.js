@@ -6,6 +6,7 @@ const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 const title = document.getElementById("title");
 const logoSenac = document.getElementById("logoSenac");
+const logoSesc = document.getElementById("logoSesc");
 const instructions = document.getElementById("instructions");
 const playButton = document.getElementById("playButton");
 
@@ -75,6 +76,7 @@ function displayGameOver() {
 function startGame() {
   instructions.style.display = "none";
   logoSenac.style.display = "none";
+  logoSesc.style.display = "none";
   title.style.display = "flex";
 
   canvas.style.display = "block";
