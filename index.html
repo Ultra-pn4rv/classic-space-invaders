@@ -39,7 +39,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 65vh;
         text-align: center;
       }
       #instructions p{
@@ -54,13 +54,13 @@
         border-radius: 8px;
         font-size: 1.2em;
         font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-        color: rgb(32, 206, 67);
+        color: rgb(255, 0, 0);
         cursor: pointer;
       }
       #playButton:hover {
-        background: rgb(32, 206, 67);
+        background: rgb(255, 103, 103);
         color: white;
-        box-shadow: rgb(146, 231, 142) 5px 5px 10px;
+        box-shadow: rgb(255, 171, 171) 5px 5px 10px;
         transition: 0.3s;
       }
       #logoSenac {
@@ -68,18 +68,29 @@
         align-items: center;
         justify-content: space-between;
       }
+      #logoSesc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 20px;
+        height: 15vh;
+      }
   </style>
 </head>
 <body>
   <div id="logoSenac">
     <div>
-      <img src="src/assets/images/logo-senac.png" alt="Logo Senac" width="300px" height="110px">
+      <img src="src/assets/images/logo-senac.png" alt="Logo Senac" width="150px" height="75px">
     </div>
+    <div id="logoSesc"></div>
     <div>
-      <img src="src/assets/images/logo-sesc.png" alt="Logo Sesc" width="300px" height="150px">
+      <img src="src/assets/images/logo-sesc.png" alt="Logo Sesc" width="150px" height="75px">
     </div>
   </div>
   <div id="instructions">
+    <div>
+      <img src="src/assets/images/player.png" width="200px" height="200px">
+    </div>
     <h1>Bem-vindo ao Jogo Space Invaders!</h1>
     <p>Use as setas esquerda e direita para mover.</p>
     <p>Pressione a barra de espaço para atirar.</p>
