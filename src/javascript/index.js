@@ -66,7 +66,7 @@ function displayGameOver() {
   if(isGameOver) {
     let text = didWin ? "Você Ganhou!" : "Game Over";
     let textOffset = didWin ? 5 : 3.6;
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "black";
     ctx.font = "35px 'Press Start 2P'";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
   }
