@@ -34,6 +34,17 @@
     #game, #title {
         display: none;
       }
+      #logoSenac {
+        display: flex;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #logoSesc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
       #instructions {
         display: flex;
         flex-direction: column;
@@ -42,11 +53,11 @@
         height: 65vh;
         text-align: center;
       }
-      #instructions p{
+      #instructions p {
         margin: 10px 0;
         font-size: 1.2em;
         font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-        color: rgb(0, 0, 0);
+        color: black;
       }
       #playButton {
         margin: 10px 0;
@@ -58,22 +69,10 @@
         cursor: pointer;
       }
       #playButton:hover {
-        background: rgb(255, 103, 103);
+        background: rgb(255, 31, 31);
         color: white;
-        box-shadow: rgb(255, 171, 171) 5px 5px 10px;
+        box-shadow: rgb(255, 106, 106) 5px 5px 10px;
         transition: 0.3s;
-      }
-      #logoSenac {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      #logoSesc {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 20px;
-        height: 15vh;
       }
   </style>
 </head>
@@ -96,7 +95,20 @@
     <p>Pressione a barra de espaço para atirar.</p>
     <button id="playButton">Jogar</button>
   </div>
+  <div id="gameOverScreen">
+    <h1>Game Over</h1>
+    <p id=" gameOverScreenScore"></p>
+    <button id="retryButton" class="button">Tentar Novamente</button>
+    </div>
+    <div id="winScreen">
+      <h1>Parabéns, você venceu!</h1>
+      <p id="winScreenScore"></p>
+      <button id="restartButton" class="button">Reiniciar</button>
+      </div>
+      <div>
   <h1 id="title">Space Invaders</h1>
+  <p id="score">Pontuação: 0</p>
+  </div>
   <canvas id="game"></canvas>
   <script type="module" src="src/javascript/index.js"></script>
 </body>

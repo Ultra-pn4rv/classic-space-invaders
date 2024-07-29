@@ -8,6 +8,8 @@ const title = document.getElementById("title");
 const logoSenac = document.getElementById("logoSenac");
 const logoSesc = document.getElementById("logoSesc");
 const instructions = document.getElementById("instructions");
+const winScreen = document.getElementById("winScreen");
+const score = document.getElementById("score");
 const playButton = document.getElementById("playButton");
 
 canvas.width = 1024;
@@ -31,6 +33,10 @@ let isGameOver = false;
 let didWin = false;
 
 function game() {
+  canvas.style.display = "none";
+  winScreen.style.display = "none";
+  title.style.display = "none";
+  score.style.display = "none";
   checkGameOver();
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
   displayGameOver();
