@@ -81,6 +81,7 @@ function displayGameOver() {
 // Função para iniciar o jogo
 function startGame() {
   instructions.style.display = "none";
+  logosContainer.style.display = "none";
   logoSenac.style.display = "none";
   logoSesc.style.display = "none";
   title.style.display = "flex";
