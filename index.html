@@ -10,14 +10,14 @@
   <title>Classic Space Invaders | Felipe</title>
   <style>
     canvas{
-      box-shadow: black 20px 10px 50px;
+      box-shadow: black;
     }
     h1{
       margin-top: 20px;
       margin-bottom: 10px;
       font-size: 2.5em;
       font-family: "Press Start 2P";
-      color: white;
+      color: rgb(0, 0, 0);
     }
     body{
       display: flex;
@@ -28,14 +28,86 @@
       height: 100vh;
       background: linear-gradient(
         0deg,
-        rgba(12, 12, 12, 0.804) 0%,
-        rgb(0, 0, 0) 100%
+        rgba(255, 255, 255, 0.804) 0%
       );
     }
+    #game, #title {
+        display: none;
+      }
+      #logosContainer {
+        display: flex;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #logoSesc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #instructions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 65vh;
+        text-align: center;
+      }
+      #instructions p {
+        margin: 10px 0;
+        font-size: 1.2em;
+        font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+        color: black;
+      }
+      #playButton {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 1.2em;
+        font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+        color: rgb(255, 0, 0);
+        cursor: pointer;
+      }
+      #playButton:hover {
+        background: rgb(255, 31, 31);
+        color: white;
+        box-shadow: rgb(255, 106, 106) 5px 5px 10px;
+        transition: 0.3s;
+      }
   </style>
 </head>
 <body>
-  <h1>Space Invaders</h1>
+  <div id="logosContainer">
+    <div id="logoSenac">
+      <img src="src/assets/images/logo-senac.png" alt="Logo Senac" width="150px" height="75px">
+    </div>
+    <div id="logoSesc">
+      <img src="src/assets/images/logo-sesc.png" alt="Logo Sesc" width="150px" height="75px">
+    </div>
+  </div>
+  <div id="instructions">
+    <div>
+      <img src="src/assets/images/player.png" width="200px" height="200px">
+    </div>
+    <h1>Bem-vindo ao Jogo Space Invaders!</h1>
+    <p>Use as setas esquerda e direita para mover.</p>
+    <p>Pressione a barra de espaço para atirar.</p>
+    <button id="playButton">Jogar</button>
+  </div>
+  <div id="gameOverScreen">
+    <h1>Game Over</h1>
+    <p id=" gameOverScreenScore"></p>
+    <button id="retryButton" class="button">Tentar Novamente</button>
+    </div>
+    <div id="winScreen">
+      <h1>Parabéns, você venceu!</h1>
+      <p id="winScreenScore"></p>
+      <button id="restartButton" class="button">Reiniciar</button>
+      </div>
+      <div>
+  <h1 id="title">Space Invaders</h1>
+  <p id="score">Pontuação: 0</p>
+  </div>
   <canvas id="game"></canvas>
   <script type="module" src="src/javascript/index.js"></script>
 </body>
