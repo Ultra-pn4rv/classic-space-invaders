@@ -1,11 +1,12 @@
 export default class Enemy {
-  constructor(x, y, imageNumber) {
+  constructor(x, y, enemyType) {
     this.x = x;
     this.y = y;
     this.width = 44;
     this.height = 32;
+    this.enemyType = enemyType; // Adicione esta linha
     this.image = new Image();
-    this.image.src = `src/assets/images/enemy${imageNumber}.png`;
+    this.image.src = `src/assets/images/enemy${enemyType}.png`;
   }
 
   draw(ctx) {
@@ -18,7 +19,7 @@ export default class Enemy {
   }
 
   collideWith(sprite) {
-    if(
+    if (
       this.x + this.width > sprite.x &&
       this.x < sprite.x + sprite.width &&
       this.y + this.height > sprite.y &&
